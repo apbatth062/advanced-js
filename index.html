@@ -2,105 +2,18 @@
 <html>
     <head>
         <meta charset='UTF-8'/>
-        <title>Some Web Page</title>
+        <title>Advanced javascript</title>
     </head>
     <body>
         <h1>ADVANCED JAVASCRIPT</h1> </br>
-	<p id="p1"></p> 
-    <p id="p2"></p> 
-    <p id="p3"></p> 
-        <button onclick="sq()">passByValue</button>
-        <button onclick="reference()">passByReference</button>
-        <button onclick="scope()">scope</button>
-        <button onclick="host()">host</button>
-        <button onclick="closure()">closure</button>
-        <button onclick="f1()">function</button>
 
-        <script>
-		
-             //pass by value
-         function square(x) {
-                              x = x * x;
-                            }
-			function sq()
-			          {
-                        var y = 10;
-                       square(y);
-                        console.log(y);
-						document.getElementById("p1").innerHTML= y;
-						}
-						
-		 //pass by reference
-		 
-		 function turnOn(machine) {
-               machine.isOn = true;
-                 }
- 
-            var computer = {
-                    isOn: false
-                       };
-             function reference()
-             {
-                    turnOn(computer);
-                   console.log(computer.isOn);
-                   document.getElementById("p1").innerHTML= computer.isOn;
-             }
+    <a href="PBV.html"> <button >passByValue</button>  </a>    </br> </br>
+   <a href="PBR.html" >    <button >passByReference</button> </a> </br>   </br>
+    <a href="scope.html">   <button >scope</button>  </a>  </br>   </br>
+    <a href="host.html">   <button >host</button>   </a>  </br>   </br>
+      <a href="closure.html">  <button >closure</button>   </a>  </br> </br>
+        <a href="function.html">  <button >function</button> </a>  </br> </br>
 
-             //scope
-             // Initialize a global variable
-             var species = "human";
-
-         function transform() {
-              // Initialize a local, function-scoped variable
-              var species = "werewolf";
-                  console.log(species);
-            
-                    }
-               function scope()
-               {
-               // Log the global and local variable
-                  console.log(species);
-                  
-                       transform();
-                     console.log(species);
-                     
-                 document.getElementById("p1").innerHTML= species;
-               }
-
-
-               //hoisting
-               function host()
-               {
-               console.log(x);
-               document.getElementById("p1").innerHTML= x;
-                  // Variable assignment
-                  var x = 100;
-               }
-
-
-
-                 ///closure
-                 var x=10;
-                 function closure()
-
-                {
-                 var x=20;
-                 document.getElementById("p1").innerHTML= x;
-                 }
-
-                 ////////functions
-                 function f1()
-                 {
-                 var x = myFunction(4, 3);
-           document.getElementById("p1").innerHTML = x;
-
-              function myFunction(a, b) {
-                                     return a * b;
-                                   } 
-                 }
-
-
-                    
-        </script>
+  
     </body>
 </html>
