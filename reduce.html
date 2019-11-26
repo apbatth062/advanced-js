@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'/>
+        <title>Some Web Page</title>
+    </head>
+    <body>
+        <h1 >Reduce</h1>  </body></br>
+        <button onclick="reduce()">reduce</button>
+         <h2><p id="p1"></p></h2> 
+        
+
+        <script>
+
+var pilots = [
+  {
+    id: 10,
+    name: "Poe Dameron",
+    years: 14,
+  },
+  {
+    id: 2,
+    name: "Temmin 'Snap' Wexley",
+    years: 30,
+  },
+  {
+    id: 41,
+    name: "Tallissan Lintra",
+    years: 16,
+  },
+  {
+    id: 99,
+    name: "Ello Asty",
+    years: 22,
+  }
+];
+               function reduce()
+                 {
+                    var totalYears = pilots.reduce(function (accumulator, pilot) {
+             return accumulator + pilot.years;
+                   }, 0);
+                   document.getElementById("p1").innerHTML= totalYears;
+                 }
+
+
+        </script>
+     
+    </body>
+
+    </html>

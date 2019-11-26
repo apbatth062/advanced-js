@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'/>
+        <title>Some Web Page</title>
+    </head>
+    <body>
+        <h1 >MAP and Arrays</h1>  </body></br>
+        <button onclick="map()">map</button>
+        <button onclick="Arrays()">Array</button>
+         <h2><p id="p1"></p></h2> 
+        
+
+        <script>
+               var officers = [
+             { id: 20, name: 'Captain Piett' },
+              { id: 24, name: 'General Veers' },
+              { id: 56, name: 'Admiral Ozzel' },
+             { id: 88, name: 'Commander Jerjerrod' }
+              ];
+                 function map()
+
+                {
+                    var officersIds = officers.map(function (officer) {
+                     return officer.id;
+                });
+                 document.getElementById("p1").innerHTML= officersIds;
+                 }
+
+                function Arrays()
+                {
+                    var officersIds = [];
+                officers.forEach(function (officer) {
+                officersIds.push(officer.id);
+                }); 
+                document.getElementById("p1").innerHTML= officersIds;
+                }
+
+
+        </script>
+     
+    </body>
+
+    </html>

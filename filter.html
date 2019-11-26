@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'/>
+        <title>Some Web Page</title>
+    </head>
+    <body>
+        <h1 >FILTER</h1>  </body></br>
+        <button onclick="filter()">filter</button>
+         <h2><p id="p1"></p></h2> 
+         <h2><p id="p2"></p></h2> 
+        
+
+        <script>
+ 
+
+ var ages = [32, 33, 16, 40];
+
+function checkAdult(age) {
+  return age >= 18;
+}
+
+function filter() {
+  document.getElementById("p1").innerHTML = ages.filter(checkAdult);
+}
+</script>
+    </body>
+
+    </html>
